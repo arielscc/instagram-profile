@@ -1,58 +1,67 @@
 @font-face {
-    font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?s3ijxx');
-    src:  url('../fonts/icomoon.eot?s3ijxx#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?s3ijxx') format('truetype'),
-      url('../fonts/icomoon.woff?s3ijxx') format('woff'),
-      url('../fonts/icomoon.svg?s3ijxx#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-live_tv:before {
-    content: "\e904";
-  }
-  .icon-grid:before {
-    content: "\e905";
-  }
-  .icon-price-tags:before {
-    content: "\e906";
-  }
-  .icon-compass:before {
-    content: "\e903";
-  }
-  .icon-instagram:before {
-    content: "\e902";
-  }
-  .icon-brand:before {
-    content: "\e902";
-  }
-  .icon-social:before {
-    content: "\e902";
-  }
-  .icon-user-o:before {
-    content: "\e900";
-  }
-  .icon-heart-o:before {
-    content: "\e901";
-  }
-  
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?cpenb0');
+  src:  url('../fonts/icomoon.eot?cpenb0#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?cpenb0') format('truetype'),
+    url('../fonts/icomoon.woff?cpenb0') format('woff'),
+    url('../fonts/icomoon.svg?cpenb0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e909";
+}
+.icon-triangle-down:before {
+  content: "\e907";
+}
+.icon-dots-three-horizontal:before {
+  content: "\e908";
+}
+.icon-live_tv:before {
+  content: "\e904";
+}
+.icon-grid:before {
+  content: "\e905";
+}
+.icon-price-tags:before {
+  content: "\e906";
+}
+.icon-compass:before {
+  content: "\e903";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-brand:before {
+  content: "\e902";
+}
+.icon-social:before {
+  content: "\e902";
+}
+.icon-user-o:before {
+  content: "\e900";
+}
+.icon-heart-o:before {
+  content: "\e901";
+}
+
   /* ========================== HEADER ========================== */
   body{
     margin: 0;
@@ -64,11 +73,12 @@
     justify-content: center;
 }
 .header-container{
-    width: 50vw;
+    width: 50%;
+    /* background: teal; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .icon a{
@@ -83,8 +93,10 @@
 .icon img{
     padding: 0 15px;
     margin-bottom: -8px;
+    max-width: 100%;
 }
 .nav-bar ol{
+    padding: 0;
     list-style: none;
     display: flex;
 }
@@ -107,4 +119,137 @@
 
   /* ========================== PROFILE ========================== */
 
-  
+  .block-container{
+    /* background-color: orange; */
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+  }
+
+  .profile-container{
+    /* background-color: teal; */
+    padding: 50px 0;
+    width: 50%;
+    display: grid;
+    /* grid-gap: 30px; */
+    grid-template-columns: 35% 1fr;
+    color: #545454;
+
+  }
+
+  .profile-img{
+    justify-self: center;
+  }
+  .profile-img img{
+    max-width: 100%;
+    border-radius: 50%;
+    padding: 10px;
+
+  }
+  .first-line{
+    display: flex;
+    align-items: center;
+  }
+  .profile-desc h1{
+    font-weight: lighter;
+    font-size: 24px;
+    margin: 0;
+  }
+  .first-line a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .first-line .follow a{
+    font-size: .9em;
+    border: 1px #dbdbdb solid;
+    padding: 2px 28px;
+    margin: 0 10px;
+    border-radius: 3px;
+  }
+  .first-line .drop-down a{
+    font-size: .9em;
+    border: 1px #dbdbdb solid;
+    padding: 2px 10px;
+    margin: 0 10px;
+    border-radius: 3px;
+  }
+  .first-line p{
+    margin-right: 30px;
+  }
+
+  .histories-container{
+    grid-column: span 2;
+    /* background-color: khaki; */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);    
+    justify-items: center;
+  }
+  .history-item{
+    cursor: pointer;
+    text-align: center;
+  }
+  .history-item img{
+    width: 77px;
+    border-radius: 50%;
+    border: double #e6e6e6 8px;
+  }
+  .block-content{
+    grid-column: span 2;
+  }
+  .content-menu{
+    border-top: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+    grid-column: span 3;
+  }
+  .pubs,
+  .tags{
+    display: inline-block;
+  }
+  .block-content{
+    grid-column: span 3;
+  }
+  .content{
+    display: grid;
+    grid-template-columns: repeat(3, minmax( 50px, 293px ) );
+    grid-gap: 28px;
+    justify-content: center;
+  }
+  .content-menu .pubs a{  
+    color: #262626;
+    text-decoration: none;
+    margin:15px 30px;
+   }
+  .content-menu .tags a{
+    color: #a2a2a2;
+    text-decoration: none;
+    margin:15px 30px;
+  }
+  .item{
+    cursor: pointer;
+  }
+  .item img{
+    width: 100%;
+    vertical-align: top;
+  }
+
+
+  @media screen and (max-width: 768px){
+    body{
+      font-size: .8em;
+    }
+    .search{
+      display: none;
+    }
+    .profile-container,
+    .header-container{
+      width: 90%;
+    }
+    .histories-container{
+      overflow: auto;
+    }
+    .content{
+      grid-gap: 3px;
+    }
+
+  }
